@@ -1,19 +1,9 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
-_G.autoCollect = true
 
 function antiAFK()
     game:GetService("Players").LocalPlayer.Idled:connect(function()
         game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame) wait(1) game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
     end)
-end
-
-
-
-function collect()
-    while wait() do
-        if not _G.autoCollect then break end
-        game:GetService("ReplicatedStorage").RemoteObjects.CollectedMoney:FireServer()
-    end
 end
 
 function infmoney()
@@ -51,15 +41,6 @@ local UI = Material.Load({
 local Page = UI.New({
     Title = "Main"
  })
-
- Page.Toggle({
-    Text = "Auto Collect",
-    Callback = function(bool)
-        _G.autoCollect = bool
-        if bool then
-            collect()
-        end
-    end,})
     
    Page.Button({
         Text = "Anti AFK",
