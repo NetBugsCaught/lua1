@@ -8,7 +8,7 @@ end
 
 function infmoney()
     local args = {
-        [1] = 999999999999999999999
+        [1] = 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     }
     
     game:GetService("ReplicatedStorage").RemoteObjects.DanceGameCash:FireServer(unpack(args))
