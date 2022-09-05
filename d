@@ -14,7 +14,7 @@ function infmoney()
     game:GetService("ReplicatedStorage").RemoteObjects.DanceGameCash:FireServer(unpack(args))
     
     local args = {
-    [1] = 700
+    [1] = 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     }
 
     game:GetService("ReplicatedStorage").RemoteObjects.IncrementBeachCash:FireServer(unpack(args))
